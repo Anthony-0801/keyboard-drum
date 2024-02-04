@@ -4,78 +4,69 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+    background: #ffc600;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 1170px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background: #fff;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 10;
-}
-
-header::after {
-    content: '';
-    clear: both;
-    display: table;
-}
-
-.logo {
-    float: left;
-    padding: 10px 0;
-}
-
-nav {
-    float: right;
-}
-
-nav ul {
+    font-family: 'Avenir', sans-serif;
     margin: 0;
-    padding: 0;
-    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-nav li {
-    display: inline;
-    margin-left: 40px;
-    margin-top: 10px;
-    position: relative;
+.keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-around;
 }
 
-nav a {
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
+.key {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 .5rem black;
 }
 
-nav a:hover {
-    color: #000;
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
 }
 
-nav a::before {
-    content: '';
+kbd {
     display: block;
-    height: 5px;
-    width: 100%;
-    background-color: #444;
-    position: absolute;
-    top: 0;
-    width: 0%;
-    transition: all ease-in-out 250ms;
+    font-size: 4rem;
 }
 
-nav a:hover::before {
-    width: 100%;
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+}
+
+/*Hero Image*/
+.hero {
+    min-height: 100vh;
+    background: url('img/hero.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
